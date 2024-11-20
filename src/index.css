@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 antialiased bg-gradient-to-br from-blue-50 to-indigo-50;
+  }
+
+  h1 {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
+  }
+}
+
+@layer components {
+  .form-radio {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 transition-all duration-200 ease-in-out;
+  }
+
+  .question-card {
+    @apply transform transition-all duration-300 hover:scale-[1.01] hover:shadow-lg;
+  }
+
+  .answer-option {
+    @apply transition-all duration-200 ease-in-out hover:bg-blue-50 rounded-lg px-3 py-2;
+  }
+
+  .result-card {
+    @apply transform transition-all duration-300 hover:shadow-lg bg-white/80 backdrop-blur-sm;
+  }
+
+  .score-badge {
+    @apply text-sm font-medium px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-sm;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
